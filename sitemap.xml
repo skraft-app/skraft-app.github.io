@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://skraft.app/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skraft.app/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://skraft.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skraft.app/"/>
+  </url>
+  <url>
+    <loc>https://skraft.app/fr/</loc>
+    <lastmod>2026-11-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://skraft.app/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://skraft.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://skraft.app/"/>
+  </url>
+</urlset>
