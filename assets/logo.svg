@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF9A2E"/><stop offset="1" stop-color="#E25F00"/></linearGradient>
+    <!-- Each face's stroke rounds the outline but stops at its shared edges. -->
+    <clipPath id="right"><rect x="512" y="0" width="512" height="1024"/></clipPath>
+    <clipPath id="top"><path d="M512,512 L70.4,257 L70.4,0 L953.6,0 L953.6,257 Z"/></clipPath>
+  </defs>
+  <rect x="100" y="100" width="824" height="824" rx="185" fill="url(#bg)"/>
+  <g stroke-linejoin="round" stroke-width="6">
+    <path d="M291.2,384.5 L512.0,512.0 L512.0,767.0 L291.2,639.5 Z" fill="#FBE8D6" stroke="#FBE8D6"/>
+    <path d="M512.0,512.0 L732.8,384.5 L732.8,639.5 L512.0,767.0 Z" fill="#F2C9A2" stroke="#F2C9A2" clip-path="url(#right)"/>
+    <path d="M512.0,257.0 L732.8,384.5 L512.0,512.0 L291.2,384.5 Z" fill="#FFFFFF" stroke="#FFFFFF" clip-path="url(#top)"/>
+  </g>
+</svg>
