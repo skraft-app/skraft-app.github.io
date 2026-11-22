@@ -2,16 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <script>
+    (function () {
+      var langs = navigator.languages || [navigator.language || ""];
+      for (var i = 0; i < langs.length; i++) {
+        if (/^fr\b/i.test(langs[i])) { location.replace("/fr/"); return; }
+        if (/^en\b/i.test(langs[i])) return;
+      }
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Skraft, a simple 3D modeller on real solids</title>
-  <meta name="description" content="Skraft is a simple, intuitive 3D modeller on real solids. Open source, in your browser or on macOS, Windows and Linux.">
+  <meta name="description" content="Skraft is a simple, intuitive 3D modeller on real solids. Open Source, in your browser or on macOS, Windows and Linux.">
   <link rel="canonical" href="https://skraft.app/">
   <link rel="alternate" hreflang="en" href="https://skraft.app/">
   <link rel="alternate" hreflang="fr" href="https://skraft.app/fr/">
   <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
   <link rel="stylesheet" href="/style.css">
   <meta property="og:title" content="Skraft, a simple 3D modeller on real solids">
-  <meta property="og:description" content="Skraft is a simple, intuitive 3D modeller on real solids. Open source, in your browser or on macOS, Windows and Linux.">
+  <meta property="og:description" content="Skraft is a simple, intuitive 3D modeller on real solids. Open Source, in your browser or on macOS, Windows and Linux.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://skraft.app/">
   <meta property="og:image" content="https://skraft.app/assets/modeling-en.png">
@@ -50,22 +59,22 @@
       <header class="name">
         <h1><img src="/assets/logo.svg" alt="" width="42" height="42">Skraft</h1>
         <p>A simple 3D modeller <br>on real solids.</p>
+        <p class="status">Open Source and in development.</p>
       </header>
       <div class="block">
         <a class="try" href="https://try.skraft.app"><strong>Try it <span aria-hidden="true">→</span></strong><small>in your browser, with WebGPU</small></a>
         <nav aria-label="Links">
           <a href="https://github.com/skraft-app/skraft/releases/latest">Download</a>
           <a href="https://github.com/skraft-app/skraft">Source</a>
-          <a href="/fr/" hreflang="fr" lang="fr">Français</a>
         </nav>
         <dl>
           <div><dt>Version</dt><dd>0.0.2, test</dd></div>
-          <div><dt>License</dt><dd><a href="https://github.com/skraft-app/skraft/blob/main/LICENSE">Open source, GPL v3</a></dd></div>
+          <div><dt>License</dt><dd><a href="https://github.com/skraft-app/skraft/blob/main/LICENSE">Open Source, GPL v3</a></dd></div>
           <div><dt>Kernel</dt><dd><a href="https://github.com/tangency-labs/solidcore">SolidCore</a></dd></div>
           <div><dt>Formats</dt><dd>STEP, SketchUp, PDF</dd></div>
           <div><dt>Author</dt><dd>© 2026 Boris Beaulant</dd></div>
         </dl>
-        <p class="credits">Inspired by <a href="https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension">OpenCutList</a>.</p>
+        <p class="credits">Inspired by <a href="https://opencutlist.org">OpenCutList</a> and <a href="https://solidcraft.io">SolidCraft</a>.</p>
       </div>
     </aside>
   </main>
