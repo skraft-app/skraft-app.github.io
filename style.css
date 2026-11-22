@@ -153,7 +153,8 @@ aside {
   min-height: 0;
   border-right: 1.5px solid var(--rule);
 }
-.name { padding: 20px 18px; }
+.name { position: relative; padding: 20px 18px; }
+.lang { position: absolute; top: 8px; right: 10px; color: var(--soft); font: 11px/1.5 var(--mono); }
 h1 { display: flex; align-items: center; gap: 8px; margin-left: -5px; font-size: 38px; font-weight: 600; line-height: 1; letter-spacing: -.02em; }
 .name p { margin-top: 13px; font-size: 18px; line-height: 1.28; }
 .name .status { margin-top: 6px; color: var(--soft); font-size: 12.5px; }

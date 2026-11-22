@@ -4,6 +4,10 @@
   <meta charset="utf-8">
   <script>
     (function () {
+      var chosen;
+      try { chosen = localStorage.getItem("lang"); } catch (e) {}
+      if (chosen === "fr") { location.replace("/fr/"); return; }
+      if (chosen === "en" || document.referrer.indexOf(location.origin + "/") === 0) return;
       var langs = navigator.languages || [navigator.language || ""];
       for (var i = 0; i < langs.length; i++) {
         if (/^fr\b/i.test(langs[i])) { location.replace("/fr/"); return; }
@@ -17,6 +21,7 @@
   <link rel="canonical" href="https://skraft.app/">
   <link rel="alternate" hreflang="en" href="https://skraft.app/">
   <link rel="alternate" hreflang="fr" href="https://skraft.app/fr/">
+  <link rel="alternate" hreflang="x-default" href="https://skraft.app/">
   <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
   <link rel="stylesheet" href="/style.css?v=5">
   <meta property="og:title" content="Skraft, a simple 3D modeller on real solids">
@@ -57,6 +62,7 @@
     </div>
     <aside>
       <header class="name">
+        <a class="lang" href="/fr/" hreflang="fr" lang="fr" onclick="try{localStorage.setItem('lang','fr')}catch(e){}">Français</a>
         <h1><img src="/assets/logo.svg" alt="" width="42" height="42">Skraft</h1>
         <p>A simple 3D modeller <br>on real solids.</p>
         <p class="status">Open Source and in development.</p>
