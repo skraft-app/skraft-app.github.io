@@ -2,6 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <script>
+    (function () {
+      var langs = navigator.languages || [navigator.language || ""];
+      for (var i = 0; i < langs.length; i++) {
+        if (/^fr\b/i.test(langs[i])) { location.replace("/fr/"); return; }
+        if (/^en\b/i.test(langs[i])) return;
+      }
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Skraft, a simple 3D modeller on real solids</title>
   <meta name="description" content="Skraft is a simple, intuitive 3D modeller on real solids. Open Source, in your browser or on macOS, Windows and Linux.">
@@ -57,7 +66,6 @@
         <nav aria-label="Links">
           <a href="https://github.com/skraft-app/skraft/releases/latest">Download</a>
           <a href="https://github.com/skraft-app/skraft">Source</a>
-          <a href="/fr/" hreflang="fr" lang="fr">Français</a>
         </nav>
         <dl>
           <div><dt>Version</dt><dd>0.0.2, test</dd></div>
