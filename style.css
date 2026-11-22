@@ -155,7 +155,9 @@ aside {
 }
 .name { position: relative; padding: 20px 18px; }
 .lang { position: absolute; top: 8px; right: 10px; color: var(--soft); font: 11px/1.5 var(--mono); }
-h1 { display: flex; align-items: center; gap: 8px; margin-left: -5px; font-size: 38px; font-weight: 600; line-height: 1; letter-spacing: -.02em; }
+h1 { font-size: 38px; font-weight: 600; line-height: 1; }
+.brand { display: flex; align-items: center; gap: 8px; margin-left: -5px; letter-spacing: -.02em; }
+.tag { display: block; margin-top: 13px; font-size: 18px; font-weight: 400; line-height: 1.28; }
 .name p { margin-top: 13px; font-size: 18px; line-height: 1.28; }
 .name .status { margin-top: 6px; color: var(--soft); font-size: 12.5px; }
 
@@ -174,6 +176,18 @@ dt { color: var(--soft); font: 11px/1.5 var(--mono); }
 dd { text-align: right; }
 .credits { padding: 0 18px 8px; color: var(--soft); font-size: 11.5px; }
 
+/* Below the sheet: what Skraft is, in words. */
+.notes { width: calc(100% - 12px); margin: 18px 6px 6px; padding: 22px 24px 24px; border: 1.5px solid var(--rule); outline: 1px solid var(--hair); outline-offset: 5px; }
+.notes h2 { display: block; margin-bottom: 8px; font-size: 22px; font-weight: 600; line-height: 1.2; white-space: normal; }
+.notes p { line-height: 1.45; }
+.sk { color: var(--ink); font-weight: 600; white-space: nowrap; }
+.sk img { display: inline-block; width: 1.2em; height: 1.2em; margin-right: .15em; vertical-align: -.25em; }
+.intro { max-width: 72ch; font-size: 16px; }
+.features { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px 28px; margin-top: 20px; }
+.features div { padding-top: 8px; border-top: 1px solid var(--rule); }
+.features h3 { margin: 0 0 4px; font-size: 15px; font-weight: 600; line-height: 1.25; }
+.features p { color: var(--soft); font-size: 14px; }
+
 /* Narrow: the name, the model at once, the action, then the other views. */
 @media (max-width: 960px) {
   body { padding: 8px; }
@@ -182,14 +196,17 @@ dd { text-align: right; }
   .name { order: 1; padding: 15px 14px 11px; }
   h1 { font-size: 30px; }
   h1 img { width: 34px; height: 34px; }
-  .name p { margin-top: 7px; font-size: 18px; }
-  .name p br { display: none; }
+  .tag { margin-top: 7px; }
+  .tag br { display: none; }
   .view { order: 4; padding: 12px 12px 0; }
   .view:first-child { order: 2; padding-top: 0; }
   .block { order: 3; margin-top: 12px; }
   .list { order: 5; width: auto; min-width: 0; padding-bottom: 12px; }
+  .notes { width: calc(100% - 10px); margin: 16px 5px 5px; padding: 16px 14px; outline-offset: 4px; }
+  .features { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 520px) {
+  .features { grid-template-columns: minmax(0, 1fr); }
   .mat { display: none; }
   tbody th, tbody td { padding-block: 4px; }
   .balloon { width: 15px; height: 15px; margin: -7.5px 0 0 -7.5px; font-size: 9px; }
